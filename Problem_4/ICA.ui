@@ -1,0 +1,1671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1080</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1080</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>ICA</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>images/network-connection.png</normaloff>images/network-connection.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedHome">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="Home">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="1" column="1">
+         <widget class="QLabel" name="label_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Signal Analysis</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Sound Analysis</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="btnHomeSound">
+          <property name="icon">
+           <iconset>
+            <normaloff>images/maximal-volume-audio-interface-symbol-of-a-speaker-side-view-with-lines-representing-sound.png</normaloff>images/maximal-volume-audio-interface-symbol-of-a-speaker-side-view-with-lines-representing-sound.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>250</width>
+            <height>250</height>
+           </size>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="btnHomeSignal">
+          <property name="icon">
+           <iconset>
+            <normaloff>images/lifeline-signal.png</normaloff>images/lifeline-signal.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>250</width>
+            <height>250</height>
+           </size>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="soundAnalysis">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="1" column="0" colspan="2">
+         <widget class="QToolBox" name="toolBox">
+          <widget class="QWidget" name="soundSong">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1036</width>
+             <height>569</height>
+            </rect>
+           </property>
+           <attribute name="icon">
+            <iconset>
+             <normaloff>images/musical-notes-sign.png</normaloff>images/musical-notes-sign.png</iconset>
+           </attribute>
+           <attribute name="label">
+            <string>Song Separation (Music-Vocals)</string>
+           </attribute>
+           <attribute name="toolTip">
+            <string>This part represents Problem 4 - Part A.</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="4" column="2">
+             <widget class="QPushButton" name="btnPlayMusic">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>-Music-</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>images/musical-note-symbol-1.png</normaloff>images/musical-note-symbol-1.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>Space</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QPushButton" name="btnPlayVocals">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>-Vocals-</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>images/usher.png</normaloff>images/usher.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>Space</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="3">
+             <widget class="QLineEdit" name="textCurrentFile">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="inputMask">
+               <string/>
+              </property>
+              <property name="text">
+               <string>Please select audio file...</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="placeholderText">
+               <string>Please select audio file or record new file...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QPushButton" name="btnPlay">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Play</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>images/right-arrowhead-black-triangular-shape.png</normaloff>images/right-arrowhead-black-triangular-shape.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>Space</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" colspan="3">
+             <widget class="QPushButton" name="btnImportSong">
+              <property name="text">
+               <string>Import...</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QCheckBox" name="checkBox">
+              <property name="text">
+               <string>E</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0" colspan="3">
+             <widget class="QGroupBox" name="groupBox_8">
+              <property name="title">
+               <string>Result</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <item>
+                <widget class="PlotWidget" name="plotSongVocals" native="true"/>
+               </item>
+               <item>
+                <widget class="PlotWidget" name="plotSongMusic" native="true"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="soundCoctail">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1036</width>
+             <height>569</height>
+            </rect>
+           </property>
+           <attribute name="icon">
+            <iconset>
+             <normaloff>images/bars-graphic.png</normaloff>images/bars-graphic.png</iconset>
+           </attribute>
+           <attribute name="label">
+            <string>Coctail Party (Sources Separation)</string>
+           </attribute>
+           <attribute name="toolTip">
+            <string>This part represents Problem 4 - Part B.</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="0" column="0">
+             <widget class="QStackedWidget" name="stackedCoctail">
+              <property name="maximumSize">
+               <size>
+                <width>1014</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="Mix">
+               <layout class="QGridLayout" name="gridLayout_9">
+                <item row="6" column="0">
+                 <widget class="QGroupBox" name="groupBox_6">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>992</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="title">
+                   <string>SourceE</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_6">
+                   <item>
+                    <widget class="QPushButton" name="btnImportE">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="text">
+                      <string>Import...</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="textCurrentFileE">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>980</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>Please select audio file...</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Please select audio file or record new file...</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QGroupBox" name="groupBox_5">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>992</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="title">
+                   <string>SourceD</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_5">
+                   <item>
+                    <widget class="QPushButton" name="btnImportD">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="text">
+                      <string>Import...</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="textCurrentFileD">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>980</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>Please select audio file...</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Please select audio file or record new file...</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QGroupBox" name="groupBox">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>992</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="title">
+                   <string>Sources</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout">
+                   <item>
+                    <widget class="QRadioButton" name="radioFive">
+                     <property name="text">
+                      <string>Five Sources</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/musical-notes-sign_5.png</normaloff>images/musical-notes-sign_5.png</iconset>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="radioFour">
+                     <property name="text">
+                      <string>Four Sources</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/musical-notes-sign_4.png</normaloff>images/musical-notes-sign_4.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="radioThree">
+                     <property name="text">
+                      <string>Three Sources</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/musical-notes-sign_3.png</normaloff>images/musical-notes-sign_3.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="radioTwo">
+                     <property name="text">
+                      <string>Two Sources</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/musical-notes-sign.png</normaloff>images/musical-notes-sign.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="8" column="0">
+                 <widget class="QPushButton" name="btnMix">
+                  <property name="maximumSize">
+                   <size>
+                    <width>992</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Start</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>images/bars-graphic.png</normaloff>images/bars-graphic.png</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QGroupBox" name="groupBox_2">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>992</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="title">
+                   <string>SourceA</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_2">
+                   <item>
+                    <widget class="QPushButton" name="btnImportA">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="text">
+                      <string>Import...</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="textCurrentFileA">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>980</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>Please select audio file...</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Please select audio file or record new file...</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QGroupBox" name="groupBox_3">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>992</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="title">
+                   <string>SourceB</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_3">
+                   <item>
+                    <widget class="QPushButton" name="btnImportB">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="text">
+                      <string>Import...</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="textCurrentFileB">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>980</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>Please select audio file...</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Please select audio file or record new file...</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QGroupBox" name="groupBox_4">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>992</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="title">
+                   <string>SourceC</string>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_4">
+                   <item>
+                    <widget class="QPushButton" name="btnImportC">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="text">
+                      <string>Import...</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="textCurrentFileC">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>980</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string>Please select audio file...</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Please select audio file or record new file...</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="Separate">
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <item>
+                 <widget class="QGroupBox" name="groupBox_7">
+                  <property name="title">
+                   <string>Mixes</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_7">
+                   <item row="0" column="0">
+                    <widget class="PlotWidget" name="plotMixA" native="true"/>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="PlotWidget" name="plotMixB" native="true"/>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="PlotWidget" name="plotMixC" native="true"/>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="PlotWidget" name="plotMixD" native="true"/>
+                   </item>
+                   <item row="0" column="4">
+                    <widget class="PlotWidget" name="plotMixE" native="true"/>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QPushButton" name="btnPlayMixA">
+                     <property name="text">
+                      <string>Mix A</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/right-arrowhead-black-triangular-shape.png</normaloff>images/right-arrowhead-black-triangular-shape.png</iconset>
+                     </property>
+                     <property name="flat">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QPushButton" name="btnPlayMixB">
+                     <property name="text">
+                      <string>Mix B</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/right-arrowhead-black-triangular-shape.png</normaloff>images/right-arrowhead-black-triangular-shape.png</iconset>
+                     </property>
+                     <property name="flat">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="2">
+                    <widget class="QPushButton" name="btnPlayMixC">
+                     <property name="text">
+                      <string>Mix C</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/right-arrowhead-black-triangular-shape.png</normaloff>images/right-arrowhead-black-triangular-shape.png</iconset>
+                     </property>
+                     <property name="flat">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="3">
+                    <widget class="QPushButton" name="btnPlayMixD">
+                     <property name="text">
+                      <string>Mix D</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/right-arrowhead-black-triangular-shape.png</normaloff>images/right-arrowhead-black-triangular-shape.png</iconset>
+                     </property>
+                     <property name="flat">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="4">
+                    <widget class="QPushButton" name="btnPlayMixE">
+                     <property name="text">
+                      <string>Mix E</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/right-arrowhead-black-triangular-shape.png</normaloff>images/right-arrowhead-black-triangular-shape.png</iconset>
+                     </property>
+                     <property name="flat">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="groupBox_9">
+                  <property name="title">
+                   <string>Separates</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_8">
+                   <item row="1" column="0">
+                    <widget class="QPushButton" name="btnPlaySeparateA">
+                     <property name="text">
+                      <string>Separate A</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/right-arrowhead-black-triangular-shape.png</normaloff>images/right-arrowhead-black-triangular-shape.png</iconset>
+                     </property>
+                     <property name="flat">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QPushButton" name="btnPlaySeparateB">
+                     <property name="text">
+                      <string>Separate B</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/right-arrowhead-black-triangular-shape.png</normaloff>images/right-arrowhead-black-triangular-shape.png</iconset>
+                     </property>
+                     <property name="flat">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="2">
+                    <widget class="QPushButton" name="btnPlaySeparateC">
+                     <property name="text">
+                      <string>Separate C</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/right-arrowhead-black-triangular-shape.png</normaloff>images/right-arrowhead-black-triangular-shape.png</iconset>
+                     </property>
+                     <property name="flat">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="3">
+                    <widget class="QPushButton" name="btnPlaySeparateD">
+                     <property name="text">
+                      <string>Separate D</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/right-arrowhead-black-triangular-shape.png</normaloff>images/right-arrowhead-black-triangular-shape.png</iconset>
+                     </property>
+                     <property name="flat">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="4">
+                    <widget class="QPushButton" name="btnPlaySeparateE">
+                     <property name="text">
+                      <string>Separate E</string>
+                     </property>
+                     <property name="icon">
+                      <iconset>
+                       <normaloff>images/right-arrowhead-black-triangular-shape.png</normaloff>images/right-arrowhead-black-triangular-shape.png</iconset>
+                     </property>
+                     <property name="flat">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="PlotWidget" name="plotSeparateD" native="true"/>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="PlotWidget" name="plotSeparateA" native="true"/>
+                   </item>
+                   <item row="0" column="4">
+                    <widget class="PlotWidget" name="plotSeparateE" native="true"/>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="PlotWidget" name="plotSeparateB" native="true"/>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="PlotWidget" name="plotSeparateC" native="true"/>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="btnBackMixer">
+                  <property name="text">
+                   <string>Back to Mixer</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>images/left-arrows.png</normaloff>images/left-arrows.png</iconset>
+                  </property>
+                  <property name="flat">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="btnStop">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Stop</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>images/right-arrowhead-black-square-shape.png</normaloff>images/right-arrowhead-black-square-shape.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="btnHome_1">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Home</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>images/home.png</normaloff>images/home.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="signalAnalysis">
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QPushButton" name="btnHome_2">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Home</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>images/home.png</normaloff>images/home.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnImportSignal">
+          <property name="text">
+           <string>Import...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="textCurrentSingal">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="inputMask">
+           <string/>
+          </property>
+          <property name="text">
+           <string>Please select audio file...</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="placeholderText">
+           <string>Please select audio file or record new file...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="1" column="1">
+           <widget class="QPushButton" name="btnSignalScaleDown">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>images/minus-sign-of-horizontal-bar.png</normaloff>images/minus-sign-of-horizontal-bar.png</iconset>
+            </property>
+            <property name="shortcut">
+             <string>-</string>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="btnSignalScaleUp">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>images/plus-sign-of-horizontal-bar.png</normaloff>images/plus-sign-of-horizontal-bar.png</iconset>
+            </property>
+            <property name="shortcut">
+             <string>+</string>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2" rowspan="2">
+           <widget class="QPushButton" name="btnSignalLeft">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>images/right-arrowhead.png</normaloff>images/right-arrowhead.png</iconset>
+            </property>
+            <property name="shortcut">
+             <string>Right</string>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0" rowspan="2">
+           <widget class="QPushButton" name="btnSignalRight">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>images/left-arrowhead.png</normaloff>images/left-arrowhead.png</iconset>
+            </property>
+            <property name="shortcut">
+             <string>Left</string>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_10">
+          <property name="title">
+           <string>Original Signal</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="PlotWidget" name="plotOriginal" native="true"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_11">
+          <property name="title">
+           <string>Separated Signal</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="PlotWidget" name="plotSeparate" native="true"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="loading">
+          <property name="icon">
+           <iconset>
+            <normaloff>images/loading-lines-512.png</normaloff>images/loading-lines-512.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>500</width>
+            <height>500</height>
+           </size>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QWidget</extends>
+   <header>pyqtgraph</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlay</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>89</x>
+     <y>598</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>311</x>
+     <y>178</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>textCurrentFile</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>42</x>
+     <y>592</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>392</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlayVocals</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>38</x>
+     <y>597</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>121</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlayMusic</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>54</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>607</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>groupBox_4</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>541</x>
+     <y>197</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>381</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>groupBox_5</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>553</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>102</x>
+     <y>448</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>groupBox_6</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>593</x>
+     <y>197</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>146</x>
+     <y>537</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioThree</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>groupBox_5</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>429</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>332</x>
+     <y>463</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioThree</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>groupBox_6</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>500</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>387</x>
+     <y>531</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioFour</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>groupBox_6</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>337</x>
+     <y>199</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>544</x>
+     <y>538</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plotMixC</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>353</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plotMixD</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>473</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plotMixE</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plotSeparateC</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>353</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plotSeparateD</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>473</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plotSeparateE</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlayMixC</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>353</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlayMixD</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>473</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlayMixE</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlaySeparateC</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>353</x>
+     <y>595</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlaySeparateD</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>473</x>
+     <y>595</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioTwo</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlaySeparateE</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>595</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioThree</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plotMixD</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>473</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioThree</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plotMixE</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioThree</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plotSeparateD</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>473</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioThree</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plotSeparateE</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioThree</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlayMixD</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>473</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioThree</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlayMixE</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioThree</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlaySeparateD</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>473</x>
+     <y>595</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioThree</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlaySeparateE</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>595</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioFour</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plotMixE</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>278</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioFour</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>plotSeparateE</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>278</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioFour</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlayMixE</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>278</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioFour</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>btnPlaySeparateE</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>278</x>
+     <y>194</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>595</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,6 @@
+confirmed_cases_url, deaths_url, recovered_url = Datasets -updated daily-.
+confirmed_cases_df, deaths_df, recovered_df = DataFrames. [country, dates]
+geo_data_df = [country and alpha-3_code]
+dates_list = List of available dates starting from 22 Jan up to date.
+date_df = DataFrame for Last numbers of cases (Called by "cases_by_date[date]")
+cases_by_date[date] = DataFrame for cases on a specific date.
